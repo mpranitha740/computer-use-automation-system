@@ -1,0 +1,18 @@
+{
+  "status": "hard_failure",
+  "capability_id": "cap_3a0600c3a4",
+  "capability_version": 2,
+  "run_id": "replay_878892ff",
+  "outputs": {},
+  "business_outcome_code": null,
+  "business_outcome_message": null,
+  "failure": {
+    "step_id": "step_6",
+    "step_description": "Extract savings_balance from the balance paragraph",
+    "expected": "locator to resolve: bolded balance amount inside 'Current Savings Balance: $X' paragraph",
+    "observed": "no strategy matched; tried ['css:.balance-amount-that-no-longer-exists (timeout)']",
+    "screenshot_path": "C:\\Users\\DELL\\Downloads\\Assignment\\cua_system\\evidence\\replay_878892ff\\failure_step_6.png"
+  },
+  "intervention_request_id": null,
+  "duration_ms": 6387
+}

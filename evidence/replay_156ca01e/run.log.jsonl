@@ -1,0 +1,13 @@
+{"ts": 1789503201.125466, "run_id": "replay_156ca01e", "kind": "replay", "actor": "system", "event": "run_start", "detail": {"capability_id": "cap_c7fbf01082", "capability_name": "open_sub_account_reach_confirmation", "version": 2, "params": {"member_id": "12345", "account_type": "Savings", "deposit": "50", "username": "operator", "password": "d*******s"}}}
+{"ts": 1789503201.7991264, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_0", "action": "navigate"}}
+{"ts": 1789503201.9098675, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_1", "action": "fill"}}
+{"ts": 1789503201.9421277, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_2", "action": "fill"}}
+{"ts": 1789503202.0178957, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_3", "action": "click"}}
+{"ts": 1789503202.0944169, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_4", "action": "fill"}}
+{"ts": 1789503202.165675, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_5", "action": "click"}}
+{"ts": 1789503202.2714052, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_6", "action": "click"}}
+{"ts": 1789503207.343734, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_7", "action": "select_option"}}
+{"ts": 1789503207.3617332, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_8", "action": "fill"}}
+{"ts": 1789503207.4328609, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_9", "action": "click"}}
+{"ts": 1789503207.4708629, "run_id": "replay_156ca01e", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_11", "action": "extract"}}
+{"ts": 1789503207.5825617, "run_id": "replay_156ca01e", "kind": "replay", "actor": "system", "event": "run_end", "detail": {"status": "success", "outputs": {"confirmation_details": "Account Type\tSavings\nInitial Deposit\t$50"}, "business_outcome_code": null}}

@@ -1,0 +1,11 @@
+{"ts": 1789502896.6481297, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "system", "event": "run_start", "detail": {"capability_id": "cap_3a0600c3a4", "capability_name": "lookup_member_balance", "version": 2, "params": {"member_id": "12345", "username": "operator", "password": "d*******s"}}}
+{"ts": 1789502897.3224678, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_0", "action": "navigate"}}
+{"ts": 1789502897.4175463, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_1", "action": "fill"}}
+{"ts": 1789502897.44757, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_2", "action": "fill"}}
+{"ts": 1789502897.5308914, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_3", "action": "click"}}
+{"ts": 1789502897.6064093, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_4", "action": "fill"}}
+{"ts": 1789502897.6795607, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_5", "action": "click"}}
+{"ts": 1789502897.726269, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_6", "action": "extract"}}
+{"ts": 1789502897.7972822, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_7", "action": "click"}}
+{"ts": 1789502897.8533933, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_8", "action": "navigate"}}
+{"ts": 1789502898.007863, "run_id": "replay_f74ca0a8", "kind": "replay", "actor": "system", "event": "run_end", "detail": {"status": "success", "outputs": {"savings_balance": "$4,215.30"}, "business_outcome_code": null}}

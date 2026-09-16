@@ -1,0 +1,26 @@
+{
+  "id": "intervent_c9e436180e",
+  "created_at": 1789503254.1125672,
+  "run_id": "replay_3e39ebcd",
+  "capability_id": "cap_c7fbf01082",
+  "goal": "Log in to the CoreBank admin console as the operator (username 'operator', password 'demo-pass'), open member 12345's page, start opening a new Savings sub-account with an initial deposit of 50, and reach the confirmation screen. Do NOT click the final 'Confirm & Open Account' button -- reaching the confirmation screen with the entered details visible is the whole goal. Then, WITH HUMAN APPROVAL, finalize the account.",
+  "step_id": "step_finalize",
+  "reason": "Step step_finalize (Click 'Confirm & Open Account' to finalize the new sub-account) requires human approval before an irreversible action is taken.",
+  "url": "http://127.0.0.1:5055/members/12345/sub-accounts/new/confirm",
+  "title": "Confirm Sub-Account",
+  "screenshot_path": "C:\\Users\\DELL\\Downloads\\Assignment\\cua_system\\evidence\\replay_3e39ebcd\\intervention_step_finalize.png",
+  "status": "resolved",
+  "resolved_at": 1789503254.1967123,
+  "human_actions": [
+    {
+      "action": "note",
+      "text": "Reviewing confirmation screen before finalizing an irreversible account-opening action."
+    },
+    {
+      "action": "click",
+      "ref": "e0",
+      "target": "Confirm & Open Account",
+      "value": null
+    }
+  ]
+}

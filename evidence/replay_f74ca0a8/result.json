@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "capability_id": "cap_3a0600c3a4",
+  "capability_version": 2,
+  "run_id": "replay_f74ca0a8",
+  "outputs": {
+    "savings_balance": "$4,215.30"
+  },
+  "business_outcome_code": null,
+  "business_outcome_message": null,
+  "failure": null,
+  "intervention_request_id": null,
+  "duration_ms": 1358
+}

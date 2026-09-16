@@ -1,0 +1,352 @@
+{
+  "capability_id": "cap_c7fbf01082",
+  "name": "open_sub_account_reach_confirmation",
+  "version": 1,
+  "description": "Log in to the CoreBank admin console as the operator (username 'operator', password 'demo-pass'), open member 12345's page, start opening a new Savings sub-account with an initial deposit of 50, and reach the confirmation screen. Do NOT click the final 'Confirm & Open Account' button -- reaching the confirmation screen with the entered details visible is the whole goal.",
+  "target": {
+    "app_id": "corebank_admin",
+    "vendor_product": "CoreBankAdminConsole",
+    "base_url": "http://127.0.0.1:5055/login",
+    "tenant_id": null
+  },
+  "parameters": [
+    {
+      "name": "username",
+      "type": "string",
+      "required": true,
+      "description": "Operator login username",
+      "example": null,
+      "sensitive": true
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": true,
+      "description": "Operator login password",
+      "example": null,
+      "sensitive": true
+    },
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "description": "Member ID to open a sub-account for",
+      "example": "12345",
+      "sensitive": false
+    },
+    {
+      "name": "account_type",
+      "type": "string",
+      "required": true,
+      "description": "Sub-account type",
+      "example": "Savings",
+      "sensitive": false
+    },
+    {
+      "name": "deposit",
+      "type": "string",
+      "required": true,
+      "description": "Initial deposit amount in dollars",
+      "example": "50",
+      "sensitive": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "confirmation_details",
+      "type": "string",
+      "description": "The account type and deposit amount shown on the confirmation screen",
+      "sensitive": false
+    }
+  ],
+  "steps": [
+    {
+      "id": "step_0",
+      "description": "Navigate to http://127.0.0.1:5055/login",
+      "action": "navigate",
+      "locator": null,
+      "value_template": "http://127.0.0.1:5055/login",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_1",
+      "description": "Fill textbox '(unlabeled)'",
+      "action": "fill",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "css",
+            "value": "input[name=\"username\"]"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|0"
+          }
+        ],
+        "description": "textbox '(unlabeled)'"
+      },
+      "value_template": "{{username}}",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_2",
+      "description": "Fill textbox '(unlabeled)'",
+      "action": "fill",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "css",
+            "value": "input[name=\"password\"]"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|1"
+          }
+        ],
+        "description": "textbox '(unlabeled)'"
+      },
+      "value_template": "{{password}}",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_3",
+      "description": "Click button 'Log In'",
+      "action": "click",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "role",
+            "role": "button",
+            "value": "Log In"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|2"
+          }
+        ],
+        "description": "button 'Log In'"
+      },
+      "value_template": null,
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_4",
+      "description": "Fill textbox '(unlabeled)'",
+      "action": "fill",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "css",
+            "value": "input[name=\"member_id\"]"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|0"
+          }
+        ],
+        "description": "textbox '(unlabeled)'"
+      },
+      "value_template": "{{member_id}}",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_5",
+      "description": "Click button 'Search'",
+      "action": "click",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "role",
+            "role": "button",
+            "value": "Search"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|1"
+          }
+        ],
+        "description": "button 'Search'"
+      },
+      "value_template": null,
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_6",
+      "description": "Click link 'Open new sub-account'",
+      "action": "click",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "role",
+            "role": "link",
+            "value": "Open new sub-account"
+          },
+          {
+            "strategy": "nth",
+            "value": "a|0"
+          }
+        ],
+        "description": "link 'Open new sub-account'"
+      },
+      "value_template": null,
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_7",
+      "description": "Select 'Savings' in 'Savings\\nChecking\\nCertificate of Deposit'",
+      "action": "select_option",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "role",
+            "role": "combobox",
+            "value": "Savings\nChecking\nCertificate of Deposit"
+          },
+          {
+            "strategy": "css",
+            "value": "select[name=\"account_type\"]"
+          },
+          {
+            "strategy": "nth",
+            "value": "select|0"
+          }
+        ],
+        "description": "combobox 'Savings\nChecking\nCertificate of Deposit'"
+      },
+      "value_template": "Savings",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_8",
+      "description": "Fill textbox '(unlabeled)'",
+      "action": "fill",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "css",
+            "value": "input[name=\"deposit\"]"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|0"
+          }
+        ],
+        "description": "textbox '(unlabeled)'"
+      },
+      "value_template": "{{deposit}}",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_9",
+      "description": "Click button 'Continue'",
+      "action": "click",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "role",
+            "role": "button",
+            "value": "Continue"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|1"
+          }
+        ],
+        "description": "button 'Continue'"
+      },
+      "value_template": null,
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_11",
+      "description": "Extract confirmation_details from 'Back / edit'",
+      "action": "extract",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "role",
+            "role": "link",
+            "value": "Back / edit"
+          },
+          {
+            "strategy": "nth",
+            "value": "a|0"
+          }
+        ],
+        "description": "link 'Back / edit'"
+      },
+      "value_template": null,
+      "output_name": "confirmation_details",
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    }
+  ],
+  "success_checkpoint": {
+    "description": "Confirmation screen reached without submitting it",
+    "locator": null,
+    "expect_text_contains": "This action is irreversible once confirmed.",
+    "expect_url_contains": null
+  },
+  "business_outcomes": [
+    {
+      "code": "member_not_found",
+      "description": "No member exists with the given ID",
+      "match_text_contains": "No member found for ID"
+    },
+    {
+      "code": "validation_error",
+      "description": "Deposit amount failed validation",
+      "match_text_contains": "Validation error"
+    }
+  ],
+  "approval_state": "draft",
+  "provenance": {
+    "discovered_at": 1789503140.1761942,
+    "discovered_by_model": "gemini-flash-lite-latest",
+    "source_run_id": "discover_6c04e944",
+    "reviewed": false,
+    "reviewer": null
+  }
+}

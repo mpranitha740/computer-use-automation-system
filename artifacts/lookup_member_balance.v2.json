@@ -1,0 +1,265 @@
+{
+  "capability_id": "cap_3a0600c3a4",
+  "name": "lookup_member_balance",
+  "version": 2,
+  "description": "Log in to the CoreBank admin console as the operator (username 'operator', password 'demo-pass'), search for member 12345, open their detail page, and read their current savings balance.",
+  "target": {
+    "app_id": "corebank_admin",
+    "vendor_product": "CoreBankAdminConsole",
+    "base_url": "http://127.0.0.1:5055/login",
+    "tenant_id": null
+  },
+  "parameters": [
+    {
+      "name": "username",
+      "type": "string",
+      "required": true,
+      "description": "Operator login username",
+      "example": null,
+      "sensitive": true
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": true,
+      "description": "Operator login password",
+      "example": null,
+      "sensitive": true
+    },
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "description": "Member ID to look up",
+      "example": "12345",
+      "sensitive": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "savings_balance",
+      "type": "string",
+      "description": "The member's current savings balance as displayed on the detail page",
+      "sensitive": false
+    }
+  ],
+  "steps": [
+    {
+      "id": "step_0",
+      "description": "Navigate to http://127.0.0.1:5055/login",
+      "action": "navigate",
+      "locator": null,
+      "value_template": "http://127.0.0.1:5055/login",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_1",
+      "description": "Fill textbox '(unlabeled)'",
+      "action": "fill",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "css",
+            "value": "input[name=\"username\"]"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|0"
+          }
+        ],
+        "description": "textbox '(unlabeled)'"
+      },
+      "value_template": "{{username}}",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_2",
+      "description": "Fill textbox '(unlabeled)'",
+      "action": "fill",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "css",
+            "value": "input[name=\"password\"]"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|1"
+          }
+        ],
+        "description": "textbox '(unlabeled)'"
+      },
+      "value_template": "{{password}}",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_3",
+      "description": "Click button 'Log In'",
+      "action": "click",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "role",
+            "role": "button",
+            "value": "Log In"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|2"
+          }
+        ],
+        "description": "button 'Log In'"
+      },
+      "value_template": null,
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_4",
+      "description": "Fill textbox '(unlabeled)'",
+      "action": "fill",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "css",
+            "value": "input[name=\"member_id\"]"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|0"
+          }
+        ],
+        "description": "textbox '(unlabeled)'"
+      },
+      "value_template": "{{member_id}}",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_5",
+      "description": "Click button 'Search'",
+      "action": "click",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "role",
+            "role": "button",
+            "value": "Search"
+          },
+          {
+            "strategy": "nth",
+            "value": "input|1"
+          }
+        ],
+        "description": "button 'Search'"
+      },
+      "value_template": null,
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_6",
+      "description": "Extract savings_balance from the balance paragraph",
+      "action": "extract",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "css",
+            "value": "p b"
+          }
+        ],
+        "description": "bolded balance amount inside 'Current Savings Balance: $X' paragraph"
+      },
+      "value_template": null,
+      "output_name": "savings_balance",
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_7",
+      "description": "Click link 'Open new sub-account'",
+      "action": "click",
+      "locator": {
+        "strategies": [
+          {
+            "strategy": "role",
+            "role": "link",
+            "value": "Open new sub-account"
+          },
+          {
+            "strategy": "nth",
+            "value": "a|0"
+          }
+        ],
+        "description": "link 'Open new sub-account'"
+      },
+      "value_template": null,
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_8",
+      "description": "Navigate to http://127.0.0.1:5055/members/12345",
+      "action": "navigate",
+      "locator": null,
+      "value_template": "http://127.0.0.1:5055/members/12345",
+      "output_name": null,
+      "risk_level": "safe_reversible",
+      "requires_human_approval": false,
+      "checkpoint": null,
+      "timeout_ms": 5000
+    }
+  ],
+  "success_checkpoint": {
+    "description": "Member detail page loaded with savings balance visible",
+    "locator": null,
+    "expect_text_contains": "Current Savings Balance",
+    "expect_url_contains": null
+  },
+  "business_outcomes": [
+    {
+      "code": "member_not_found",
+      "description": "No member exists with the given ID",
+      "match_text_contains": "No member found for ID"
+    },
+    {
+      "code": "member_locked",
+      "description": "Member record is locked/restricted",
+      "match_text_contains": "Access denied: member"
+    }
+  ],
+  "approval_state": "approved",
+  "provenance": {
+    "discovered_at": 1789502687.1985593,
+    "discovered_by_model": "gemini-3.6-flash",
+    "source_run_id": "discover_de1bcce8",
+    "reviewed": true,
+    "reviewer": "human-review (see scripts/review_lookup_balance.py)"
+  }
+}

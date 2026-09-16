@@ -1,0 +1,12 @@
+{
+  "status": "business_outcome",
+  "capability_id": "cap_c7fbf01082",
+  "capability_version": 2,
+  "run_id": "replay_e3fe701a",
+  "outputs": {},
+  "business_outcome_code": "validation_error",
+  "business_outcome_message": "Deposit amount failed validation",
+  "failure": null,
+  "intervention_request_id": null,
+  "duration_ms": 6497
+}

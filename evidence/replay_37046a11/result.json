@@ -1,0 +1,12 @@
+{
+  "status": "business_outcome",
+  "capability_id": "cap_3a0600c3a4",
+  "capability_version": 2,
+  "run_id": "replay_37046a11",
+  "outputs": {},
+  "business_outcome_code": "member_not_found",
+  "business_outcome_message": "No member exists with the given ID",
+  "failure": null,
+  "intervention_request_id": null,
+  "duration_ms": 1245
+}

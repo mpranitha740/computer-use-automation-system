@@ -1,0 +1,12 @@
+{
+  "status": "business_outcome",
+  "capability_id": "cap_3a0600c3a4",
+  "capability_version": 2,
+  "run_id": "replay_47950f15",
+  "outputs": {},
+  "business_outcome_code": "member_locked",
+  "business_outcome_message": "Member record is locked/restricted",
+  "failure": null,
+  "intervention_request_id": null,
+  "duration_ms": 1173
+}

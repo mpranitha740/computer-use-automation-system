@@ -1,0 +1,23 @@
+{"ts": 1789503247.6128507, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "system", "event": "run_start", "detail": {"capability_id": "cap_c7fbf01082", "capability_name": "open_sub_account_and_finalize", "version": 1, "params": {"member_id": "12345", "account_type": "Savings", "deposit": "75", "username": "operator", "password": "d*******s"}}}
+{"ts": 1789503248.3064854, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_0", "action": "navigate"}}
+{"ts": 1789503248.4200623, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_1", "action": "fill"}}
+{"ts": 1789503248.4544897, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_2", "action": "fill"}}
+{"ts": 1789503248.5381863, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_3", "action": "click"}}
+{"ts": 1789503248.6263666, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_4", "action": "fill"}}
+{"ts": 1789503248.69727, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_5", "action": "click"}}
+{"ts": 1789503248.8299544, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_6", "action": "click"}}
+{"ts": 1789503253.9225671, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_7", "action": "select_option"}}
+{"ts": 1789503253.9426057, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_8", "action": "fill"}}
+{"ts": 1789503254.0105555, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_9", "action": "click"}}
+{"ts": 1789503254.0476747, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_11", "action": "extract"}}
+{"ts": 1789503254.0622668, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_requires_human", "detail": {"step_id": "step_finalize", "description": "Click 'Confirm & Open Account' to finalize the new sub-account"}}
+{"ts": 1789503254.1156173, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "system", "event": "intervention_raised", "detail": {"reason": "Step step_finalize (Click 'Confirm & Open Account' to finalize the new sub-account) requires human approval before an irreversible action is taken.", "step_id": "step_finalize", "intervention_id": "intervent_c9e436180e", "url": "http://127.0.0.1:5055/members/12345/sub-accounts/new/confirm"}}
+{"ts": 1789503254.1156173, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "human", "event": "operator_attached", "detail": {"intervention_id": "intervent_c9e436180e", "url": "http://127.0.0.1:5055/members/12345/sub-accounts/new/confirm"}}
+{"ts": 1789503254.1156173, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "human", "event": "note", "detail": {"text": "Reviewing confirmation screen before finalizing an irreversible account-opening action."}}
+{"ts": 1789503254.1967123, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "human", "event": "manual_click", "detail": {"ref": "e0", "target": "Confirm & Open Account", "value": null}}
+{"ts": 1789503254.1987119, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "human", "event": "operator_detached", "detail": {"intervention_id": "intervent_c9e436180e", "status": "resolved", "actions": 2}}
+{"ts": 1789503254.1987119, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "system", "event": "control_resumed", "detail": {"owner": "replay"}}
+{"ts": 1789503254.1987119, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "resumed_after_human", "detail": {"step_id": "step_finalize"}}
+{"ts": 1789503254.2374637, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "checkpoint", "detail": {"step_id": "step_finalize", "passed": true}}
+{"ts": 1789503254.2374637, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_extract_account_number", "action": "extract"}}
+{"ts": 1789503254.3576128, "run_id": "replay_3e39ebcd", "kind": "replay", "actor": "system", "event": "run_end", "detail": {"status": "success", "outputs": {"confirmation_details": "Account Type\tSavings\nInitial Deposit\t$75", "new_account_number": "SAV-4844B7"}, "business_outcome_code": null}}

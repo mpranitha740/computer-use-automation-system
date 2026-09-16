@@ -1,0 +1,10 @@
+{"ts": 1789503353.7112179, "run_id": "replay_878892ff", "kind": "replay", "actor": "system", "event": "run_start", "detail": {"capability_id": "cap_3a0600c3a4", "capability_name": "lookup_member_balance", "version": 2, "params": {"member_id": "12345", "username": "operator", "password": "d*******s"}}}
+{"ts": 1789503354.4794924, "run_id": "replay_878892ff", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_0", "action": "navigate"}}
+{"ts": 1789503354.5967448, "run_id": "replay_878892ff", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_1", "action": "fill"}}
+{"ts": 1789503354.6367452, "run_id": "replay_878892ff", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_2", "action": "fill"}}
+{"ts": 1789503354.7168279, "run_id": "replay_878892ff", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_3", "action": "click"}}
+{"ts": 1789503354.8054879, "run_id": "replay_878892ff", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_4", "action": "fill"}}
+{"ts": 1789503354.8855705, "run_id": "replay_878892ff", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_5", "action": "click"}}
+{"ts": 1789503354.9514298, "run_id": "replay_878892ff", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_6", "action": "extract"}}
+{"ts": 1789503359.968762, "run_id": "replay_878892ff", "kind": "replay", "actor": "replay", "event": "element_not_found", "detail": {"step_id": "step_6", "tried": ["css:.balance-amount-that-no-longer-exists (timeout)"]}}
+{"ts": 1789503360.0984578, "run_id": "replay_878892ff", "kind": "replay", "actor": "system", "event": "run_end", "detail": {"status": "hard_failure", "outputs": {}, "business_outcome_code": null}}

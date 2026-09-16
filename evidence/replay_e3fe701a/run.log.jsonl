@@ -1,0 +1,13 @@
+{"ts": 1789503213.4464612, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "system", "event": "run_start", "detail": {"capability_id": "cap_c7fbf01082", "capability_name": "open_sub_account_reach_confirmation", "version": 2, "params": {"member_id": "12345", "account_type": "Savings", "deposit": "-10", "username": "operator", "password": "d*******s"}}}
+{"ts": 1789503214.1633909, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_0", "action": "navigate"}}
+{"ts": 1789503214.2720358, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_1", "action": "fill"}}
+{"ts": 1789503214.30204, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_2", "action": "fill"}}
+{"ts": 1789503214.3849218, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_3", "action": "click"}}
+{"ts": 1789503214.4626863, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_4", "action": "fill"}}
+{"ts": 1789503214.5337894, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_5", "action": "click"}}
+{"ts": 1789503214.6577656, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_6", "action": "click"}}
+{"ts": 1789503219.7348933, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_7", "action": "select_option"}}
+{"ts": 1789503219.7554839, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_8", "action": "fill"}}
+{"ts": 1789503219.8294675, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "step_ok", "detail": {"step_id": "step_9", "action": "click"}}
+{"ts": 1789503219.868423, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "replay", "event": "business_outcome_detected", "detail": {"step_id": "step_9", "code": "validation_error"}}
+{"ts": 1789503219.9437964, "run_id": "replay_e3fe701a", "kind": "replay", "actor": "system", "event": "run_end", "detail": {"status": "business_outcome", "outputs": {}, "business_outcome_code": "validation_error"}}

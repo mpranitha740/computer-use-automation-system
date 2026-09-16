@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "capability_id": "cap_c7fbf01082",
+  "capability_version": 2,
+  "run_id": "replay_156ca01e",
+  "outputs": {
+    "confirmation_details": "Account Type\tSavings\nInitial Deposit\t$50"
+  },
+  "business_outcome_code": null,
+  "business_outcome_message": null,
+  "failure": null,
+  "intervention_request_id": null,
+  "duration_ms": 6457
+}
